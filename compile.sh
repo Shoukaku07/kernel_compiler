@@ -1,4 +1,6 @@
+echo "======================="
 echo "start compile"
+echo "======================="
 echo ""
 function compiler() {
     make -j$(nproc --all) O=out ARCH=arm64 <CODE_NAME>_defconfig
@@ -7,3 +9,6 @@ function compiler() {
                           CROSS_COMPILE_ARM32=arm-linux-gnueabi-
 }
 compiler
+echo "======================="
+echo "Compile complete"
+echo "======================="
